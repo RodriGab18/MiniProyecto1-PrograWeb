@@ -1,132 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="styles.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stlyes.css">
-    <title>Sistema de Reservación de Aulas</title>
+    <title>Administración de universidad</title>
 </head>
 <body>
+    <div>
+        <h1 class="TitulosMayores">Sistema de administración</h1>
+    </div>
+    <div>
+        <h1 class="TitulosMayores">Universidad Lorem Ipsum</h1>
+    </div>
+    <div>
+        <h3 id="TituloUsuario">Usuario: Prof. Alejandro Rodríguez (Simulado)</h3>
+    </div>
 
-    <!-- Cabecera -->
-    <header>
-        <h1>Sistema de Reservación de Aulas</h1>
-        <h2>Universidad XYZ</h2>
+    <div>
+        <div class="TitulosMenores">
+            <a href="#inicio">Inicio</a>
+        </div>
+        <div class="TitulosMenores">
+            <a href="#aulas">Aulas</a>
+        </div>
+        <div class="TitulosMenores">
+            <a href="#reservar">Reservar Aula</a>
+        </div>
+        <div class="TitulosMenores">
+            <a href="#mis-reservas">Mis reservas</a>
+        </div>
+        <div class="TitulosMenores">
+            <a href="#administracion">Administración</a>
+        </div>
+    </div>
 
-        <section>
-            <h3>Usuario autenticado</h3>
-            <p>Nombre: Juan Pérez</p>
-            <p>Rol: Estudiante</p>
-        </section>
-    </header>
-
-    <hr>
-
-    <!-- Navegación -->
-    <nav>
-        <a href="#">Inicio</a> |
-        <a href="#">Aulas</a> |
-        <a href="#">Reservar Aula</a> |
-        <a href="#">Mis Reservas</a> |
-        <a href="#">Administración</a>
-    </nav>
-
-    <hr>
-
-    <!-- Contenido principal -->
-    <main>
-
-        <!-- Dashboard -->
-        <section>
-            <h2>Resumen General</h2>
-
-            <article>
-                <h3>Aulas Disponibles</h3>
-                <p>15</p>
-            </article>
-
-            <article>
-                <h3>Reservas Activas</h3>
-                <p>8</p>
-            </article>
-        </section>
-
-        <hr>
-
-        <!-- Listado de aulas -->
-        <section>
-            <h2>Listado de Aulas</h2>
-
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Aula</th>
-                        <th>Capacidad</th>
-                        <th>Tipo</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>A-101</td>
-                        <td>30</td>
-                        <td>Aula Teórica</td>
-                        <td>Disponible</td>
-                    </tr>
-                    <tr>
-                        <td>B-205</td>
-                        <td>25</td>
-                        <td>Laboratorio</td>
-                        <td>Ocupada</td>
-                    </tr>
-                    <tr>
-                        <td>C-310</td>
-                        <td>40</td>
-                        <td>Aula Teórica</td>
-                        <td>Disponible</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <hr>
-
-        <!-- Reservación -->
-        <section>
-            <h2>Reservación de Aula</h2>
-
-            <form action="#" method="post">
-
-                <label for="aula">Seleccione un aula:</label><br>
-                <select id="aula" name="aula">
-                    <option>A-101</option>
-                    <option>B-205</option>
-                    <option>C-310</option>
-                </select>
-
-                <br><br>
-
-                <label for="fecha">Fecha:</label><br>
-                <input type="date" id="fecha" name="fecha">
-
-                <br><br>
-
-                <label for="hora">Hora:</label><br>
-                <input type="time" id="hora" name="hora">
-
-                <br><br>
-
-                <button type="submit">Reservar Aula</button>
-
+    <div>
+        <div id="inicio">
+            <div class="TitulosMenores">Resumen general</div>
+            <p>Aulas disponibles: 12</p>
+            <p>Reservas activas: 3</p>
+        </div>
+        
+        <div id="aulas">
+            <div class="TitulosMenores">Listado de aulas</div>
+            <ul>
+                <li><strong>Aula T-101</strong> - Capacidad: 45 - Tipo: Aula Teórica - Estado: Disponible</li>
+                <li><strong>Lab L-202</strong> - Capacidad: 30 - Tipo: Laboratorio - Estado: Ocupada</li>
+                <li><strong>Auditorio AC-01</strong> - Capacidad: 120 - Tipo: Auditorio - Estado: Disponible</li>
+            </ul>
+        </div>
+        
+        <div id="reservar">
+            <div class="TitulosMenores">Reservación de aula</div>
+            <form action="#" method="GET" onsubmit="return false;">
+                <label>Aula:
+                    <select name="aula" required>
+                        <option value="T-101">Aula T-101</option>
+                        <option value="L-202">Lab L-202</option>
+                        <option value="AC-01">Auditorio AC-01</option>
+                    </select>
+                </label><br>
+                <label>Fecha:
+                    <input type="date" name="fecha" required>
+                </label><br>
+                <label>Hora:
+                    <input type="time" name="hora" required>
+                </label><br>
+                <button type="submit">Enviar</button>
             </form>
-        </section>
-
-        <hr>
-
-        <!-- Mis reservas -->
-        <section>
-            <h2>Mis Reservas</h2>
-
+        </div>
+        
+        <div id="mis-reservas">
+            <div class="TitulosMenores">Mis reservas</div>
             <table border="1">
                 <thead>
                     <tr>
@@ -137,29 +83,34 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>A-101</td>
-                        <td>25/07/2026</td>
-                        <td>08:00 - 10:00</td>
+                        <td>Aula T-101</td>
+                        <td>2026-07-22</td>
+                        <td>09:00</td>
                     </tr>
                     <tr>
-                        <td>C-310</td>
-                        <td>28/07/2026</td>
-                        <td>13:00 - 15:00</td>
+                        <td>Lab L-202</td>
+                        <td>2026-07-24</td>
+                        <td>11:00</td>
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </div>
 
-    </main>
-
-    <hr>
-
-    <!-- Pie de página -->
-    <footer>
-        <p>Universidad XYZ</p>
-        <p>Año: 2026</p>
-        <p>Sistema académico para la gestión y reservación de aulas.</p>
-    </footer>
-
+        <div id="administracion">
+            <div class="TitulosMenores">Administración</div>
+            <p>Módulo administrativo (Acceso restringido).</p>
+        </div>
+    </div>
 </body>
+<footer>
+    <div class="TitulosFooter">
+        Info institucional
+    </div>
+    <div class="TitulosFooter">
+        Año: 2026
+    </div>
+    <div class="TitulosFooter">
+        Contexto sistema
+    </div>
+</footer>
 </html>

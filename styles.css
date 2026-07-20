@@ -1,0 +1,119 @@
+:root {
+    --color-ice-blue: #e5eef5;        
+    --color-cream: #fdfbf7;           
+    --color-pale-blue: #d2e4f0;       
+    
+    --color-navy-dark: #0a2540;       
+    --color-blue-medium: #0d5292;     
+    --color-blue-vibrant: #008bca;    
+    
+    --color-border-light: #99c5dd;
+    --color-text-dark: #0d2133;
+}
+
+body {
+    background-color: var(--color-ice-blue);
+    color: var(--color-text-dark);
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 10px;
+}
+
+.TitulosMayores {
+    background-color: var(--color-navy-dark);
+    color: var(--color-ice-blue);
+    padding: 12px;
+    margin: 5px 0;
+    text-align: center;
+    border: 2px solid var(--color-blue-medium);
+}
+
+#TituloUsuario {
+    color: var(--color-blue-medium);
+    margin: 10px 0;
+    border-bottom: 2px solid var(--color-border-light);
+    padding-bottom: 5px;
+}
+
+.TitulosMenores {
+    background-color: var(--color-blue-medium);
+    color: white;
+    padding: 6px 12px;
+    margin: 10px 0;
+}
+
+.TitulosMenores a {
+    color: white;
+    text-decoration: none;
+}
+
+.TitulosMenores a:hover {
+    color: var(--color-ice-blue);
+    text-decoration: underline;
+}
+
+ul {
+    background-color: var(--color-cream);
+    border: 1px solid var(--color-border-light);
+    padding: 15px;
+    list-style-type: square;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-cream);
+}
+
+table th {
+    background-color: var(--color-pale-blue);
+    color: var(--color-navy-dark);
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid var(--color-border-light);
+}
+
+form {
+    background-color: var(--color-pale-blue);
+    padding: 15px;
+    border: 1px solid var(--color-border-light);
+}
+
+form label {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+form button {
+    background-color: var(--color-blue-vibrant);
+    color: white;
+    padding: 6px 18px;
+    border: 1px solid var(--color-navy-dark);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: var(--color-blue-medium);
+}
+
+#inicio, #aulas, #reservar, #mis-reservas, #administracion {
+    background-color: var(--color-cream);
+    border: 1px solid var(--color-pale-blue);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: var(--color-navy-dark);
+    color: var(--color-ice-blue);
+    padding: 15px;
+    border-top: 3px solid var(--color-blue-vibrant);
+}
+
+.TitulosFooter {
+    margin: 5px 0;
+}

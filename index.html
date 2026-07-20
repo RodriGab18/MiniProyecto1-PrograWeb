@@ -1,62 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id= "TituloPrincipal">Administración de universidad</title>
+    <link rel="stylesheet" href="stlyes.css">
+    <title>Sistema de Reservación de Aulas</title>
 </head>
 <body>
-    <div>
-        <h1 class="TitulosMayores">Sistema de administración</h1>
-    </div>
-    <div>
-        <h1 class="TitulosMayores">Universidad Lorem Ipsum</h1>
-    </div>
-    <div>
-        <h3 id="TituloUsuario">Usuario</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKnU4XtQ8y81rbY0iIvDf4dCwvjl-ckN2P-cLgmEdo7w&s">
-    </div>
-    <div>
-        <div class="TitulosMenores">
-            Inicio
-        </div>
-        <div class="TitulosMenores">
-            Aulas
-        </div>
-        <div class="TitulosMenores">
-            Reservar Aula
-        </div>
-        <div class="TitulosMenores">
-            Mis resevas
-        </div>
-        <div class="TitulosMenores">
-            Administración
-        </div>
-    </div>
-    <div>
-        <div class="TitulosMenores">
-            Resumen general
-        </div>
-        <div class="TitulosMenores">
-            Listado de aulas
-        </div>
-        <div class="TitulosMenores">
-            Reservación de aula
-        </div>
-        <div class="TitulosMenores">
-            Mis reservas
-        </div>
-    </div>
+
+    <!-- Cabecera -->
+    <header>
+        <h1>Sistema de Reservación de Aulas</h1>
+        <h2>Universidad XYZ</h2>
+
+        <section>
+            <h3>Usuario autenticado</h3>
+            <p>Nombre: Juan Pérez</p>
+            <p>Rol: Estudiante</p>
+        </section>
+    </header>
+
+    <hr>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#">Inicio</a> |
+        <a href="#">Aulas</a> |
+        <a href="#">Reservar Aula</a> |
+        <a href="#">Mis Reservas</a> |
+        <a href="#">Administración</a>
+    </nav>
+
+    <hr>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Dashboard -->
+        <section>
+            <h2>Resumen General</h2>
+
+            <article>
+                <h3>Aulas Disponibles</h3>
+                <p>15</p>
+            </article>
+
+            <article>
+                <h3>Reservas Activas</h3>
+                <p>8</p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Listado de aulas -->
+        <section>
+            <h2>Listado de Aulas</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Aula</th>
+                        <th>Capacidad</th>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A-101</td>
+                        <td>30</td>
+                        <td>Aula Teórica</td>
+                        <td>Disponible</td>
+                    </tr>
+                    <tr>
+                        <td>B-205</td>
+                        <td>25</td>
+                        <td>Laboratorio</td>
+                        <td>Ocupada</td>
+                    </tr>
+                    <tr>
+                        <td>C-310</td>
+                        <td>40</td>
+                        <td>Aula Teórica</td>
+                        <td>Disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Reservación -->
+        <section>
+            <h2>Reservación de Aula</h2>
+
+            <form action="#" method="post">
+
+                <label for="aula">Seleccione un aula:</label><br>
+                <select id="aula" name="aula">
+                    <option>A-101</option>
+                    <option>B-205</option>
+                    <option>C-310</option>
+                </select>
+
+                <br><br>
+
+                <label for="fecha">Fecha:</label><br>
+                <input type="date" id="fecha" name="fecha">
+
+                <br><br>
+
+                <label for="hora">Hora:</label><br>
+                <input type="time" id="hora" name="hora">
+
+                <br><br>
+
+                <button type="submit">Reservar Aula</button>
+
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Mis reservas -->
+        <section>
+            <h2>Mis Reservas</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Aula</th>
+                        <th>Fecha</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A-101</td>
+                        <td>25/07/2026</td>
+                        <td>08:00 - 10:00</td>
+                    </tr>
+                    <tr>
+                        <td>C-310</td>
+                        <td>28/07/2026</td>
+                        <td>13:00 - 15:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Universidad XYZ</p>
+        <p>Año: 2026</p>
+        <p>Sistema académico para la gestión y reservación de aulas.</p>
+    </footer>
+
 </body>
-<footer>
-    <div class="TitulosFooter">
-        Info institucional
-    </div>
-    <div class="TitulosFooter">
-        Año
-    </div>
-    <div class="TitulosFooter">
-        Contexto sistema
-    </div>
-</footer>
 </html>
